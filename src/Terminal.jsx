@@ -50,7 +50,7 @@ const EXPERIENCE = [
     id: 'coeet',
     title: 'Learning Assistant, Centre of Excellence in Educational Technology – NIIT University',
     period: 'Jan 2024 – May 2024',
-    summary: 'Mentor mapping workflow, evaluation form design, mentor workshop execution, Python automation for non‑respondent detection, represented ops in NAAC audit.',
+    summary: 'Mentor mapping workflow, evaluation form design, mentor workshop execution, Python automation for non‑respondent detection, represented the org in NAAC audit.',
     stack: ['Python','Automation','Process Design','Mentorship'],
     image: coeetImg
   }
