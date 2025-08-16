@@ -1,0 +1,77 @@
+.terminalContainer { flex:1; display:flex; flex-direction:column; min-height:0; overflow:hidden; }
+.commandBar { display:flex; flex-wrap:wrap; gap:8px; padding:6px 10px; background:#020202; border-bottom:1px solid var(--panel-border); font-size:0.8rem; }
+.commandBar button { background:transparent; border:none; color:var(--green); cursor:pointer; padding:2px 6px; font-family:inherit; }
+.commandBar button:hover { background:#062d1b; }
+.terminalWindow { flex:1; padding:16px; overflow-y:auto; overflow-x:hidden; font-size:0.95rem; line-height:1.4; min-height:0; scrollbar-width:none; }
+.terminalWindow::-webkit-scrollbar { width:0; height:0; }
+.terminalWindow::-webkit-scrollbar-track { background:transparent; }
+.terminalWindow::-webkit-scrollbar-thumb { background:transparent; }
+.entry { margin-bottom:14px; }
+.user { color:#0af; }
+.cmdText { color:var(--green); }
+.output { white-space:pre-wrap; margin:4px 0 0; }
+.inputLine input { background:transparent; border:none; outline:none; color:#fff; width:60%; font-family:inherit; }
+.statusBar { font-size:0.7rem; padding:4px 10px; border-top:1px solid var(--panel-border); text-align:right; color:var(--green); }
+.skillsGrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:8px; margin-top:6px; }
+.skillLink { display:flex; align-items:center; gap:6px; padding:6px 8px; border:1px solid #0f5233; border-radius:4px; font-size:0.7rem; color:#fff; background:#08150f; text-decoration:none; transition:background .2s,border-color .2s; line-height:1.2; }
+.skillLink:hover { background:#0d2a1d; border-color:var(--green); }
+.skillIcon { font-size:1rem; display:flex; align-items:center; }
+.contactBlock { display:flex; flex-wrap:wrap; gap:16px; align-items:flex-start; margin-top:4px; }
+.contactLines { font-size:0.75rem; line-height:1.3; }
+.contactLines a { color:var(--green); }
+.contactIcons { display:flex; gap:10px; }
+.iconLink { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border:1px solid #0f5233; border-radius:6px; color:var(--green); background:#08150f; text-decoration:none; transition:background .2s,border-color .2s,transform .2s; }
+.iconLink:hover { background:#0d2a1d; border-color:var(--green); transform:translateY(-2px); }
+.output svg { display:block; }
+.cardsSection { margin:8px 0 18px; }
+.cardsHeading { margin:0 0 10px; font-size:0.9rem; color:var(--green); letter-spacing:.5px; }
+.cardsGrid { display:grid; gap:18px; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); }
+.infoCard { background:#0a0a0a; border:1px solid #103d28; border-radius:14px; position:relative; overflow:hidden; display:flex; flex-direction:column; transition:border-color .25s, box-shadow .25s, transform .25s; }
+.infoCard::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 20% 15%, #12271c 0%, transparent 70%); opacity:.6; pointer-events:none; }
+.infoCard:hover { border-color:var(--green); box-shadow:0 0 12px -2px #00ff9070; transform:translateY(-4px); }
+.cardImageWrap { width:100%; height:160px; overflow:hidden; background:#050505; border-bottom:1px solid #103d28; }
+.cardImage { width:100%; height:100%; object-fit:cover; display:block; filter:saturate(1.05); transition:transform .5s ease; }
+.infoCard:hover .cardImage { transform:scale(1.06); }
+.cardBody { padding:16px 16px 20px; display:flex; flex-direction:column; gap:8px; position:relative; }
+.cardTitle { margin:0; font-size:0.95rem; font-weight:600; }
+.cardPeriod { font-size:0.7rem; color:#7bdba7; letter-spacing:.6px; }
+.cardSummary { margin:2px 0 0; font-size:0.7rem; line-height:1.3; color:#ddd; }
+.cardTags { margin-top:8px; display:flex; flex-wrap:wrap; gap:8px; }
+.tag { background:#062d1b; border:1px solid #0f5233; padding:4px 8px; font-size:0.6rem; border-radius:20px; letter-spacing:.4px; color:#bfffe4; }
+.tag:hover { border-color:var(--green); }
+.cardLinkIcon { position:absolute; top:10px; right:10px; display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border:1px solid #0f5233; border-radius:6px; color:var(--green); background:#08150f; text-decoration:none; transition:background .2s,border-color .2s,transform .2s; }
+.cardLinkIcon:hover { background:#0d2a1d; border-color:var(--green); transform:translateY(-3px); }
+.contactPanelWrap { display:flex; flex-direction:column; gap:28px; margin-top:6px; }
+.contactForm { display:flex; flex-direction:column; gap:14px; background:#050805; border:1px solid #103d28; padding:20px 22px 26px; border-radius:16px; box-shadow:0 0 0 1px #072417, 0 0 22px -6px #00ff9060 inset; }
+.contactForm .formHeading { margin:0 0 4px; font-size:1rem; color:#fff; font-weight:600; letter-spacing:.5px; }
+.contactForm input, .contactForm textarea {
+  background:#08150f !important;
+  border:1px solid #0f5233;
+  border-radius:10px;
+  width:100%;
+  padding:14px 16px;
+  font-family:'Fira Code', monospace;
+  font-size:0.8rem;
+  color:#fff;
+  outline:none;
+  line-height:1.3;
+  transition:border-color .25s, background .25s, box-shadow .25s;
+  box-shadow:0 0 0 0 rgba(0,255,144,0);
+}
+.contactForm input::placeholder, .contactForm textarea::placeholder { color:#4a7f63; }
+.contactForm input:focus, .contactForm textarea:focus {
+  border-color:var(--green);
+  background:#0d2a1d !important;
+  box-shadow:0 0 0 2px rgba(0,255,144,0.15);
+}
+/* Keep dark on autocomplete */
+.contactForm input:-webkit-autofill,
+.contactForm textarea:-webkit-autofill { -webkit-box-shadow:0 0 0 1000px #08150f inset !important; -webkit-text-fill-color:#fff !important; }
+
+/* Send button updated to green theme */
+.sendBtn { display:inline-flex; align-items:center; gap:8px; padding:14px 26px; background:linear-gradient(90deg,#009e55,#00c96f); border:none; border-radius:12px; color:#fff; font-family:'Fira Code', monospace; font-size:0.8rem; cursor:pointer; letter-spacing:.5px; transition:background .25s, transform .25s; }
+.sendBtn:hover { background:linear-gradient(90deg,#00b964,#00e07b); }
+.sendBtn:active { transform:translateY(2px); }
+.sentNote { margin-top:8px; font-size:0.65rem; color:#7bdba7; letter-spacing:.4px; }
+@media (min-width:1600px) { .cardImageWrap{height:190px;} .cardsGrid{grid-template-columns:repeat(auto-fill,minmax(340px,1fr));} .cardTitle{font-size:1.05rem;} .cardSummary{font-size:0.74rem;} }
+@media (max-width:900px){ .contactPanelWrap { gap:20px; } .contactForm { padding:18px 16px 22px; } }

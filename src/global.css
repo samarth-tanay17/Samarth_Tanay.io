@@ -1,0 +1,14 @@
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin:0; font-family: 'Fira Code', monospace; background:#000; color:#eee; }
+body { -webkit-font-smoothing: antialiased; }
+a { color:#00ff90; text-decoration:none; }
+
+:root {
+  --green:#00ff90;
+  --panel-border: #00aa55;
+}
+
+::-webkit-scrollbar { width:8px; }
+::-webkit-scrollbar-track { background:#050505; }
+::-webkit-scrollbar-thumb { background:#0f3322; }
+::-webkit-scrollbar-thumb:hover { background:#145f39; }

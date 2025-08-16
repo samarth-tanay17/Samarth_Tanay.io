@@ -1,0 +1,21 @@
+# Vercel
+.vercel
+# Node
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+# Env
+.env
+.env.*
+!.env.example
+# Build output
+dist
+coverage
+# Local IDE
+.DS_Store
+*.swp
+.vscode/
+# GitHub Pages build (if used)
+docs

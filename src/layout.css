@@ -1,0 +1,41 @@
+.appShell { height:100vh; overflow:hidden; display:flex; flex-direction:column; }
+.siteHeader { height:70px; display:flex; flex-direction:column; justify-content:center; padding:10px 20px 8px; border-bottom:1px solid var(--panel-border); background:#030303; position:relative; z-index:20; }
+.siteHeader .name { font-size:1.55rem; font-weight:600; color:var(--green); letter-spacing:1px; }
+.siteHeader .tagline { font-size:0.9rem; color:#bbb; margin-top:2px; letter-spacing:0.5px; }
+.layout { display:flex; flex:1 1 auto; min-height:0; }
+.leftPane { flex:0 0 30%; max-width:30%; display:flex; align-items:center; justify-content:center; border-right:1px solid var(--panel-border); background:radial-gradient(circle at 30% 30%, #111, #050505); position:relative; }
+.leftPane .photoWrapper { position:relative; z-index:5; }
+.rightPane { flex:0 0 70%; max-width:70%; display:flex; flex-direction:column; min-height:0; }
+.siteFooter { height:40px; display:flex; align-items:center; justify-content:space-between; padding:0 14px; font-size:0.75rem; border-top:1px solid var(--panel-border); color:var(--green); background:#020202; letter-spacing:0.5px; }
+.leftStatus { font-family:'Fira Code', monospace; }
+.rightClock { opacity:0.9; }
+.siteHeader, .siteFooter { flex-shrink:0; }
+
+@media (max-width: 900px) {
+  /* Mobile: allow full page scroll */
+  .appShell { height:auto; min-height:100vh; overflow-y:auto; }
+  /* Hide mobile page scrollbar */
+  .appShell { scrollbar-width:none; }
+  .appShell::-webkit-scrollbar { width:0; height:0; }
+  /* Stack layout */
+  .layout { flex-direction:column; min-height:0; }
+  .leftPane { width:100%; max-width:none; flex:0 0 auto; padding:28px 0 18px; border-right:none; border-bottom:1px solid var(--panel-border); }
+  .rightPane { width:100%; max-width:none; flex:0 0 auto; }
+  /* Disable internal terminal scrolling so it flows with page */
+  .terminalWindow { overflow:visible; }
+  .siteHeader { height:64px; }
+  .siteFooter { height:34px; font-size:0.65rem; }
+}
+
+@media (max-width: 600px) {
+  .siteHeader .name { font-size:1.25rem; }
+  .siteHeader .tagline { font-size:0.75rem; }
+  .leftPane { padding:20px 0 14px; }
+  .terminalWindow { font-size:0.85rem; }
+  .commandBar { font-size:0.7rem; gap:4px; }
+}
+
+@media (max-width: 420px) {
+  .commandBar button { padding:2px 4px; }
+  .terminalWindow { padding:12px; }
+}
